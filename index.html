@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexible Builders Ltd</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Flexible Builders Ltd Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Transforming Spaces, Building Dreams</h1>
+      <p>Your trusted partner in home renovations and construction.</p>
+      <a href="#contact" class="btn">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <!-- Repeat this card for each service -->
+        <div class="card">
+          <img src="service1.jpg" alt="Home Renovations" />
+          <h3>Home Renovations</h3>
+          <p>We specialize in transforming your home into a space that reflects your style and meets your needs.</p>
+        </div>
+        <!-- Add more service cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="project-gallery">
+        <!-- Repeat this for each project image -->
+        <div class="project-item">
+          <img src="project1.jpg" alt="Project 1" />
+        </div>
+        <!-- Add more project items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-carousel">
+        <!-- Repeat this for each testimonial -->
+        <div class="testimonial">
+          <p>"Flexible Builders transformed our home beyond our expectations. Highly recommend!"</p>
+          <h4>- Happy Client</h4>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>With years of experience in the construction industry, Flexible Builders Ltd is committed to delivering high-quality workmanship and exceptional customer service.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="submit_form.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Flexible Builders Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
