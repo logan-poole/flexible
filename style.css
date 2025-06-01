@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* ==== RESET & BASE STYLES ==== */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f7f7f7;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -18,31 +19,79 @@ body {
   margin: auto;
 }
 
-/* Header */
+/* ==== HEADER & NAVIGATION ==== */
 header {
-  background-color: #04AA6D;
-  padding: 1rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.2rem;
 }
 
-header .logo {
-  height: 50px;
+/* ==== NAV WRAPPER ==== */
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
 }
 
-nav ul {
-  list-style: none;
+/* ==== SINGLE NAV LIST ==== */
+.nav {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  list-style: none;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  margin: 0;
 }
 
-nav a {
-  color: #fff;
+/* ==== NAV BUTTONS ==== */
+.nav li a {
+  color: white;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
   font-size: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
 }
 
-/* Hero Section */
+.nav li a:hover {
+  background-color: rgb(247, 247, 247);
+  border-color: rgb(247, 247, 247);
+  color: rgb(247, 247, 247);
+  color: black;
+}
+
+/* ==== LOGO BELOW NAV ==== */
+.logo-circle {
+  margin-top: 0.8rem;
+  background-color: rgb(247, 247, 247);
+  padding: 1rem;
+  border-radius: 50%;
+  border: 5px solid #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img.logo {
+  max-height: 120px;
+  width: auto;
+}
+
+/* ==== HERO SECTION ==== */
 .hero {
   background: url('images/Landing.jpg') center/cover no-repeat;
   height: 100vh;
@@ -80,7 +129,7 @@ nav a {
   text-decoration: none;
 }
 
-/* Sections */
+/* ==== SECTION STYLES ==== */
 section {
   padding: 4rem 0;
 }
@@ -96,7 +145,7 @@ h2 {
   color: #04AA6D;
 }
 
-/* Service Cards */
+/* ==== SERVICE CARDS ==== */
 .service-cards {
   display: flex;
   flex-wrap: wrap;
@@ -125,7 +174,7 @@ h2 {
   color: #04AA6D;
 }
 
-/* Projects Gallery */
+/* ==== PROJECTS ==== */
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -142,8 +191,7 @@ h2 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Testimonials */
+/* ==== TESTIMONIALS ==== */
 .testimonial {
   max-width: 700px;
   margin: auto;
@@ -160,7 +208,7 @@ h2 {
   color: #555;
 }
 
-/* Contact Form */
+/* ==== CONTACT FORM ==== */
 form {
   max-width: 600px;
   margin: auto;
@@ -182,7 +230,7 @@ textarea {
   min-height: 120px;
 }
 
-/* Footer */
+/* ==== FOOTER ==== */
 footer {
   background-color: #282E34;
   color: #fff;
@@ -191,8 +239,22 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
-  .project-item img {
-    height: 150px;
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .logo-circle img.logo {
+    max-height: 120px;
   }
 }
